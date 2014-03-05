@@ -313,7 +313,7 @@
     <string name="cyanogenmod_waiver_body">Changing this setting may be against your state or government laws.\n\nIn selecting \'OK\' below, you acknowledge this warning and waive, indemnify and hold harmless Resurrection Remix ® ROM and its contributors from all legal liabilities.</string>
 
     <!-- Quick settings panel  -->
-    <string name="quick_settings_panel_title"><i><b>Quick Settings</b></i></string>
+    <string name="quick_settings_panel_title"><i><b>Quick Settings panel</b></i></string>
     <string name="title_static_tiles">Static tiles</string>
     <string name="tile_picker_title"><i><b>Tiles and layout</b></i></string>
     <string name="tile_picker_summary">View, select or change the layout of the displayed tiles</string>
@@ -586,7 +586,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
 
     <!-- Change Log strings -->
-    <string name="changelog_title"><i><b>Changelog</b></i></string>
+    <string name="changelog_title"><i><b>View changelog</b></i></string>
     <string name="changelog_loading">Loading changelog...</string>
     <string name="changelog_error">Unable to load changelog</string>
     <string name="changelog_unknown">Unknown</string>
@@ -697,7 +697,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="device_hostname">Device hostname</string>
 
     <!-- System Interface settings  -->
-    <string name="system_settings_title"><i><b>Interface</b></i></string>
+    <string name="system_settings_title"><i><b>User Interface</b></i></string>
     <string name="system_interface_title">System interface</string>
 
     <!-- Notification Drawer  -->
@@ -841,12 +841,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="power_menu_reboot_title">Reboot menu</string>
     <string name="power_menu_screenshot_title">Screenshot</string>
     <string name="power_menu_expanded_desktop">Expanded desktop</string>
-    <string name="expanded_desktop_style">Expanded desktop style</string>
     <string name="expanded_desktop_disabled">Disabled</string>
     <string name="expanded_desktop_status_bar">Status bar visible</string>
     <string name="expanded_desktop_no_status_bar">Status bar hidden</string>
-    <string name="expanded_desktop_system_bars_visibility">Disable in lock screen</string>
-    <string name="expanded_desktop_system_bars_visibility_summary">Show status and navigation bar in lock screen during expanded desktop mode</string>
     <string name="power_menu_profiles_title">Profile switcher</string>
     <string name="power_menu_airplane_title">Airplane mode</string>
     <string name="power_menu_user_title">User switcher</string>
@@ -913,7 +910,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
 
     <!-- Status bar  -->
-    <string name="status_bar_title"><i><b>Status bar</b></i></string>
+    <string name="status_bar_title"><i><b>Status Bar</b></i></string>
     <string name="status_bar_misc_title">Misc</string>
     <string name="status_bar_battery_title">Battery status style</string>
     <string name="status_bar_style_icon_portrait">Icon portrait</string>
@@ -1000,7 +997,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
         <item quantity="other">%d times</item>
     </plurals>
 
-   <!-- App ops menu options -->
+    <!-- App ops menu options -->
     <string name="app_ops_show_user_apps">Show user apps</string>
     <string name="app_ops_show_system_apps">Show built-in apps</string>
     <string name="app_ops_reset_counters">Reset allow/deny counters</string>
@@ -1012,11 +1009,4 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 	<string name="edge_gesture_service_summary">Don\'t send touch events for navigation and status bar gestures to apps</string>
     <!-- WiFi forget all networks -->
     <string name="wifi_menu_forget_all">Forget all networks</string>
-
-    <!-- Data Usage -->
-    <!-- Subtitle of dialog for editing data usage cycle reset date. [CHAR LIMIT=32] -->
-    <string name="data_usage_cycle_editor_subtitle_cm">Date of each cycle:</string>
-    <!-- Subtitle of dialog for editing data usage cycle length. [CHAR LIMIT=32] -->
-    <string name="data_usage_lengths_spinner_subtitle">Cycle length:</string>
-
 </resources>

@@ -29,7 +29,6 @@ import android.os.UserHandle;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.telephony.MSimTelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -72,7 +71,6 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_CM_UPDATES = "cm_updates";
-    private static final String KEY_STATUS = "status_info";
 
     long[] mHits = new long[3];
 
@@ -97,7 +95,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL + getMsvSuffix());
         setValueSummary(KEY_EQUIPMENT_ID, PROPERTY_EQUIPMENT_ID);
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL);
-        setStringSummary(KEY_BUILD_NUMBER, "Resurrection Remix Kitkat KVT49L - INCREMENTAL");
+        setStringSummary(KEY_BUILD_NUMBER, "resurrection_remix_incremental_version");
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_MOD_VERSION, "ro.rr_modversion");
@@ -110,11 +108,6 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         } else if (!SELinux.isSELinuxEnforced()) {
             String status = getResources().getString(R.string.selinux_status_permissive);
             setStringSummary(KEY_SELINUX_STATUS, status);
-        }
-
-        if (MSimTelephonyManager.getDefault().isMultiSimEnabled()) {
-            findPreference(KEY_STATUS).getIntent().setClassName(
-                    "com.android.settings","com.android.settings.deviceinfo.MSimStatus");
         }
 
         // Remove selinux information if property is not present
@@ -152,8 +145,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
                 PROPERTY_EQUIPMENT_ID);
 
         // Remove Baseband version if wifi-only device
-        if (Utils.isWifiOnly(getActivity())
-                || (MSimTelephonyManager.getDefault().isMultiSimEnabled())) {
+        if (Utils.isWifiOnly(getActivity())) {
             getPreferenceScreen().removePreference(findPreference(KEY_BASEBAND_VERSION));
         }
 
